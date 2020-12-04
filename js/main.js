@@ -1,22 +1,23 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   // parallax
-  $(".parallax-window").parallax({});
+  $('.parallax-window').parallax({});
 
   // header fix
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
-      $("header").addClass("header-fix");
+      $('header').addClass('header-fix');
     } else {
-      $("header").removeClass("header-fix");
+      $('header').removeClass('header-fix');
     }
   });
 
   // centerTour
   function windowsize() {
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       var $containerwidth = $(window).width();
-      if ($containerwidth <= 575) {
-        $(".block-tours-route").each(function() {
+      if ($containerwidth <= 992) {
+        //575
+        $('.block-tours-route').each(function () {
           var blockPos = $(this).offset().top;
           var topWindow = $(window).scrollTop();
           var windowHeight = $(window).height();
@@ -24,22 +25,18 @@ jQuery(document).ready(function($) {
             blockPos < topWindow + windowHeight / 2 &&
             blockPos > topWindow + windowHeight / 4
           ) {
-            $(this).addClass("route");
+            $(this).addClass('route');
           } else {
-            $(this).removeClass("route");
+            $(this).removeClass('route');
           }
         });
       } else {
-        $(".block-tours-img").hover(
-          function() {
-            $(this)
-              .find(".block-tours-route")
-              .css("right", "0");
+        $('.block-tours-img').hover(
+          function () {
+            $(this).find('.block-tours-route').css('right', '0');
           },
-          function() {
-            $(this)
-              .find(".block-tours-route")
-              .css("right", "-100%");
+          function () {
+            $(this).find('.block-tours-route').css('right', '-100%');
           }
         );
       }
@@ -49,19 +46,19 @@ jQuery(document).ready(function($) {
   windowsize();
 
   // validate-form
-  $(".ajax-form").each(function() {
+  $('.ajax-form').each(function () {
     $(this).validate({
       messages: {
-        name: "Пожалуйста, введите ваше имя",
-        email: "Пожалуйста, введите корректный адрес электронной почты",
-        phone: "Введите свой номер телефона для связи с вами"
-      }
+        name: 'Пожалуйста, введите ваше имя',
+        email: 'Пожалуйста, введите корректный адрес электронной почты',
+        phone: 'Введите свой номер телефона для связи с вами',
+      },
     });
   });
 
   // awards_and_partners slider
   // partner slider
-  $(".partners-carousel").owlCarousel({
+  $('.partners-carousel').owlCarousel({
     nav: true,
     dots: false,
     margin: 30,
@@ -69,44 +66,44 @@ jQuery(document).ready(function($) {
     lazyLoad: true,
     autoplayHoverPause: true,
     autoplaySpeed: 1000,
-    navText: [$(".am-prev"), $(".am-next")],
+    navText: [$('.am-prev'), $('.am-next')],
     responsive: {
       0: {
         margin: 10,
-        items: 2
+        items: 2,
       },
       576: {
-        items: 3
+        items: 3,
       },
       1000: {
-        items: 5
-      }
-    }
+        items: 5,
+      },
+    },
   });
 
   // award slider
-  $(".awards-carousel").owlCarousel({
+  $('.awards-carousel').owlCarousel({
     nav: true,
     dots: false,
     autoplay: true,
     autoplayHoverPause: true,
     autoplaySpeed: 1000,
     lazyLoad: true,
-    navText: [$(".aw-prev"), $(".aw-next")],
+    navText: [$('.aw-prev'), $('.aw-next')],
     responsive: {
       0: {
-        items: 2
+        items: 2,
       },
       576: {
-        items: 3
+        items: 3,
       },
       1000: {
-        items: 5
-      }
-    }
+        items: 5,
+      },
+    },
   });
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     windowsize();
   });
 });
