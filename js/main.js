@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
   function windowsize() {
     $(window).scroll(function () {
       var $containerwidth = $(window).width();
-      if ($containerwidth <= 992) {
+      if ($containerwidth <= 991) {
         //575
         $('.block-tours-route').each(function () {
           var blockPos = $(this).offset().top;
