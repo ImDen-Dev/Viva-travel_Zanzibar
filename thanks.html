@@ -96,8 +96,8 @@
       </div>
     </section>
     <!-- free_pick -->
-
-    <footer id="contacts" class="section">
+    <!-- section-->
+    <section id="contacts" class="section">
       <div class="container">
         <div class="row">
           <div class="titles col-lg-12 text-center">
@@ -150,7 +150,70 @@
           </div>
         </div>
       </div>
+    </section>
+    <!-- section-->
+
+    <!-- footer -->
+    <footer id="footer" class="thanks">
+      <div class="container">
+        <div class="row">
+          <div id="footer_copyright" class="col-sm-12 text-center">
+            <p>
+              Copyright 2020 <span>Viva Travel&reg;</span>. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div id="footer_socials" class="col-sm-12 text-center">
+            <div id="contact_icons">
+              <ul class="contact-socials clearfix">
+                <li>
+                  <a
+                    class="foo_social ico-facebook"
+                    href="https://www.facebook.com/vivatravel.ua"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="foo_social ico-instagram"
+                    href="http://instagram.com/viva_travel"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="foo_social ico-telegram"
+                    href="https://t.me/elena_vivatravel"
+                    target="_blank"
+                    ><i class="fab fa-telegram-plane"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="foo_social ico-google"
+                    href="https://g.page/vivatravel_kiev"
+                    target="_blank"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="foo_social ico-viber"
+                    href="https://invite.viber.com/?g2=AQBWG86i9zy39Eu4ZQ12g%2B%2BKz6ZKk4n0wGjApCUvxCJVZaWWX3Qjuo5RJt1gCftR"
+                    target="_blank"
+                    ><i class="fab fa-viber"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+    <!-- footer -->
 
     <!-- modal window -->
 
@@ -261,6 +324,116 @@
       </div>
     </div>
     <!-- modal window -->
+
+    <!-- question modal window -->
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="modal_question"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-head">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" class="text-right">&times;</span>
+            </button>
+
+            <h3>Задать вопрос</h3>
+
+            <h4>Оставьте свои контакты, и мы обязательно свяжемся с Вами</h4>
+          </div>
+
+          <div class="modal-form main-form text-center form-register">
+            <form
+              action="request"
+              method="post"
+              class="form-row ajax-form close-form"
+            >
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-user-alt"></i>
+                      </div>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="name"
+                      placeholder="Ваше имя"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="email"
+                      name="email"
+                      placeholder="Ваш e-mail"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-phone-alt"></i>
+                      </div>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="phone"
+                      placeholder="Номер телефона"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <div class="input-group">
+                    <textarea
+                      class="form-control"
+                      name="modal-text"
+                      cols="30"
+                      rows="6"
+                      placeholder="Ваш вопрос"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit Button -->
+              <button
+                class="btn btn-form btn-lg btn-primary modal-btn"
+                type="submit"
+              >
+                Отправить заявку
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- question modal window -->
 
     <script src="js/libs/fontawesome.all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
